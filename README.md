@@ -9,7 +9,7 @@ Phalcon Php için Ajax DataTable
 
 View (Volt)
   <pre>
-  <ttable id="cariListesi" class="table table-hover  col-sm12" role="grid">
+  <table id="cariListesi" class="table table-hover  col-sm12" role="grid">
       <thead>        
           <tr>                                    
               <th width="5"></th>
@@ -24,7 +24,7 @@ View (Volt)
   </ttable>
   
  </pre>
-  
+  ```javascript
 <script src="{{url("plugins/pDataTables/pDataTables.js")}}"></script>
 
 tableCariListesipDataTables={
@@ -49,7 +49,7 @@ tableCariListesipDataTables={
     }
 $("#cariListesi").pDataTables(tableCariListesipDataTables);
 </script>
-
+```
 =====================================================================
 Controller
 =====================================================================
