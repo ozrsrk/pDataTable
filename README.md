@@ -32,12 +32,6 @@ tableCariListesipDataTables={
     table       :   'cariListesi',
     page        :   1, 
     limit       :   10,
-    ozelkod1    :   '',
-    ozelkod2    :   '',
-    ozelkod3    :   '',
-    kategori1   :   0,
-    kategori2   :   0,
-    kategori3   :   0,
     columns     :   [   
                         {data   :   "action1",searchable  : false},
                         {data   :   "ad_soyad"},
@@ -53,17 +47,18 @@ $("#cariListesi").pDataTables(tableCariListesipDataTables);
 =====================================================================
 Controller
 =====================================================================
-
-$resultset  = Carikart::Query()
+public function getCariListPageAction()
+  {
+  $resultset  = Carikart::Query()
         ->columns("Carikart.cari_id,Carikart.ad_soyad,Carikart.cep_telefon,Carikart.is_telefon,eposta")
         ->where("Carikart.deleted_at=1");      
 
-$dt= new DT();
-$pdata =$dt->setData($resultset)
+  $dt= new DT();
+  $pdata =$dt->setData($resultset)
      ->addColumn("action1", function($resultset){
-        return '<input type="radio" name="id" value="'.$resultset->cari_id.'" class="cariIdInput" onClick="JSF__selectedCariKartId('.$resultset->cari_id.')">';  
+        return '<input type="radio" name="id" value="'.$resultset->cari_id.'" class="cariIdInput"     onClick="JSF__selectedCariKartId('.$resultset->cari_id.')">';  
         })   
     ->make()->getData();
 
 return  json_encode($pdata, JSON_PRETTY_PRINT); 
-</code>
+}
