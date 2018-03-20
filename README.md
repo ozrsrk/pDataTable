@@ -6,8 +6,9 @@ Phalcon Php için Ajax DataTable
 
 
 ======================================================================================
+
 View (Volt)
-<code>
+<pre>  
   <table id="cariListesi" class="table table-hover  col-sm12" role="grid">
       <thead>        
           <tr>                                    
