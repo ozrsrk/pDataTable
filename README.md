@@ -48,7 +48,7 @@ tableCariListesipDataTables={
                     ],
     }
 $("#cariListesi").pDataTables(tableCariListesipDataTables);
-
+</script>
 
 =====================================================================
 Controller
