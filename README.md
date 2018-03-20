@@ -7,7 +7,7 @@ Phalcon Php için Ajax DataTable
 
 ======================================================================================
 View (Volt)
-
+<code>
   <table id="cariListesi" class="table table-hover  col-sm12" role="grid">
       <thead>        
           <tr>                                    
@@ -65,4 +65,4 @@ $pdata =$dt->setData($resultset)
     ->make()->getData();
 
 return  json_encode($pdata, JSON_PRETTY_PRINT); 
-
+</code>
