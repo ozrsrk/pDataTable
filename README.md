@@ -8,8 +8,8 @@ Phalcon Php için Ajax DataTable
 ======================================================================================
 
 View (Volt)
-<pre>  
-  <table id="cariListesi" class="table table-hover  col-sm12" role="grid">
+  
+  <ttable id="cariListesi" class="table table-hover  col-sm12" role="grid">
       <thead>        
           <tr>                                    
               <th width="5"></th>
@@ -21,7 +21,7 @@ View (Volt)
       </thead>
       <tbody>                                    
       </tbody>
-  </table>
+  </ttable>
   
   
   
