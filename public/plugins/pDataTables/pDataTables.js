@@ -102,15 +102,14 @@ jQuery.fn.pDataTables = function( options )
             $("#"+table+" thead tr th ").each(function(i,v){
             if($("#"+table+" thead tr th ").eq(i).text()!='')
                 {
+                $("#"+table+" thead tr th a").eq(i).remove();
                 $("#"+table+" thead tr th ").eq(i).append(' &nbsp; <a ><i class="fa fa-sort" aria-hidden="true" data-order="" data-index="'+i+'"></i></a>');
                 }
             });
                 
             rowCount = $("#"+table+" thead tr th").length;
-            if($("#"+table+" thead tr").length>1)
-                {
-                $("#"+table+" thead tr:first").remove();
-                }
+            //if($("#"+table+" thead tr").length>1){$("#"+table+" thead tr:first").remove();}
+                
 
             $("#"+table).find('thead tr').before(
                 '<tr>'+
