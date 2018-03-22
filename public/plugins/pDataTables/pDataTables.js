@@ -61,15 +61,7 @@ jQuery.fn.pDataTables = function( options )
                    
         $(this).off("click", "thead th a");
         $(this).on("click", "thead th a", function(e) {
-            
-            //alert($(e.target).data('index'));
-            //e.preventDefault();
-            //alert("ssss : "+e);            
-            //alert(settings.columns[$(e.target).data('index')].data);
-            //alert($(e.target).data('order'));
-            //$(e.target).data('order',"desc");
-            //alert($(e.target).data('order'));           
-            //alert(settings.order);           
+                         
 
             if($(e.target).data('order')=="")
                 {
@@ -108,7 +100,10 @@ jQuery.fn.pDataTables = function( options )
             });
                 
             rowCount = $("#"+table+" thead tr th").length;
-            //if($("#"+table+" thead tr").length>1){$("#"+table+" thead tr:first").remove();}
+            if($("#"+table+" thead tr").length>1)
+                {
+                $("#"+table+" thead tr:first").remove();        
+                }   
                 
 
             $("#"+table).find('thead tr').before(
