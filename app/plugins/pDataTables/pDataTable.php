@@ -75,8 +75,6 @@ class pDataTable {
                     }
                 }
             }
-
-        //echo "AAAAAAA : ".$data['PDataTables']['order'];    
             
         if($data['PDataTables']['order'])    
             {
@@ -151,21 +149,5 @@ class pDataTable {
                 }
             }
         return $this;         
-        }
-
-    public function replace( $data_str, $i)
-        {
-        foreach ($this->tableDefColumn as $value) {           
-            $avalue="[[".$value."]]";                 
-            $data_str=str_replace($avalue,$this->tableData[$i][$value] ,$data_str);           
-            }
-        return $data_str;
-        } 
-
-    public function setArrayData_xxxxxxx($resultset)
-        {
-        $this->tableData=$resultset;       
-        return $this;
-        }          
-        
+        }     
     }
