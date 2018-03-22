@@ -61,8 +61,8 @@ jQuery.fn.pDataTables = function( options )
                    
         $(this).off("click", "thead th a");
         $(this).on("click", "thead th a", function(e) {
-                         
-
+            
+          
             if($(e.target).data('order')=="")
                 {
                 $(e.target).data('order',"asc");
@@ -91,20 +91,20 @@ jQuery.fn.pDataTables = function( options )
  
         function setpDataTablesHeader()
             {
-            $("#"+table+" thead tr th ").each(function(i,v){
-            if($("#"+table+" thead tr th ").eq(i).text()!='')
+            $(".header-order-link").remove();                    
+            $("#"+table+" thead tr th ").each(function(i,v)
                 {
-                $("#"+table+" thead tr th a").eq(i).remove();
-                $("#"+table+" thead tr th ").eq(i).append(' &nbsp; <a ><i class="fa fa-sort" aria-hidden="true" data-order="" data-index="'+i+'"></i></a>');
-                }
-            });
+                if($("#"+table+" thead tr th ").eq(i).text()!='')
+                    {
+                    $("#"+table+" thead tr th ").eq(i).append('<a class="header-order-link">&nbsp;<i class="fa fa-sort" aria-hidden="true" data-order="" data-index="'+i+'"></i></a>');
+                    }
+                });
                 
             rowCount = $("#"+table+" thead tr th").length;
             if($("#"+table+" thead tr").length>1)
                 {
                 $("#"+table+" thead tr:first").remove();        
                 }   
-                
 
             $("#"+table).find('thead tr').before(
                 '<tr>'+
