@@ -1,6 +1,6 @@
 <?php
 namespace pDataTables;
-use Phalcon\Paginator\Adapter\Model as PaginatorModel;;;
+use Phalcon\Paginator\Adapter\Model as PaginatorModel;;;;
 
 class pDataTable {
     private $tableData;
